@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 
-require("dotenv").config();
+require("dotenv").config({ path: "../.env" });
 
 exports.authenticate = async (req, res, next) => {
   const token = req.header("Authorization").replace("Bearer ", "");
